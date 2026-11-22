@@ -25,7 +25,7 @@ void main(int argc, char* argv[])
     while ( (dirp = readdir(dp)) != NULL )
         printf("%s\n", dirp->d_name);
 
-    // 关闭目录，该指针指向估计是在堆内存
+    // 关闭目录，该指针指向估计是在堆内存，经验证，dp保存的地址确实是指向堆内存
     printf("dp value: 0x%p", dp);
 
     getchar();
